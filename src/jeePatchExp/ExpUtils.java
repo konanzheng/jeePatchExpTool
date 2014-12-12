@@ -75,7 +75,6 @@ public class ExpUtils {
 		if(classFileFolder.exists()){
 			for(String filename:classFileFolder.list()){
 				if(filename!=null&&filename.startsWith(rName.replace(constants_CLASSFILE, "$"))&&filename.endsWith(constants_CLASSFILE)){
-					System.out.println("copy resource from : "+src+" \nto :"+desc);
 					copyResource(src.replace(rName, filename),desc.replace(rName, filename));
 				}
 			}
@@ -94,7 +93,6 @@ public class ExpUtils {
 					if(line.indexOf("Index:")!=-1){  
 						line=line.replaceAll(" ","");  
 						line=line.substring(line.indexOf(":")+1,line.length());  
-						System.out.println(line);
 						String rl=project_loc+File.separatorChar+line;
 						String separator = getSeparator();
 						String[] line_strs=line.split(separator);

@@ -8,8 +8,9 @@ java web工程补丁导出工具 1.0
 
 - - -
   
-  配置方式：  
-1. 给jeePatchExp.jar 执行权限  
+  配置方式：
+    
+1. 给jeePatchExp.jar 执行权限
 2. 配置到eclipse的外部工具中   
 external Tools Conflgurations 工具配置  
 Main:
@@ -17,28 +18,28 @@ location :指定可执行jeePatchExp.jar包位置
  
 ：Auguments:
 ${project_loc}    ${project_name}		${resource_loc}		${resource_name} 	${folder_prompt}  
- 参数含义：     
-1. ${project_loc} 工程路径  
-2. ${project_name} 工程名称  
-3. ${resource_loc} 资源路径（绝对）  
-4. ${resource_name} 资源文件名  
-5.  导出目录  对话框  
+ 参数含义：
+      
+1. ${project_loc} 工程路径 
+2. ${project_name} 工程名称
+3. ${resource_loc} 资源路径（绝对）
+4. ${resource_name} 资源文件名
+5.  导出目录  对话框
 
 假如使用windows系统可能遇到不能直接调用jar文件 可以编写批处理脚本 调用
 例如：  
+
 	c:    
 	cd c:\buding  
-	java -jar jeePatchExpTool.jar %1 %2 %3 %4 %5  
+	java -jar jeePatchExp.jar %1 %2 %3 %4 %5  
+	
 **注意：**eclipse的外部工具location此时要设置为批处理的路径  
 
 - - -
+使用方式有两种： 
 
-使用方式有两种：  
-  1. 选中单个文件点击 外部工具执行  
-  2. 通过svn的teamSynchronizing 模式选中多个补丁资源 然后创建补丁"create patch..."   
+1. 选中单个文件点击 外部工具执行
+2. 通过svn的teamSynchronizing 模式选中多个补丁资源 然后创建补丁"create patch..."   
    命名成pathc20141210201418.txt （“patch”开头“.txt”结束）模式的文件名  
    然后选中这个补丁文件 点击外部工具执行
-  
-  
-
-
+   
