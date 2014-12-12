@@ -71,7 +71,7 @@ public class ExpUtils {
 	 * @param rName
 	 */
 	public void expInnerClass(String src,String desc,String rName){
-		File classFileFolder=new File(desc.replace(rName, ""));
+		File classFileFolder=new File(src.replace(rName, ""));
 		if(classFileFolder.exists()){
 			for(String filename:classFileFolder.list()){
 				if(filename!=null&&filename.startsWith(rName.replace(constants_CLASSFILE, "$"))&&filename.endsWith(constants_CLASSFILE)){
