@@ -93,11 +93,12 @@ public class ExpUtils {
 					if(line.indexOf("Index:")!=-1){  
 						line=line.replaceAll(" ","");  
 						line=line.substring(line.indexOf(":")+1,line.length());  
-						String rl=project_loc+File.separatorChar+line;
+						String[] line_strs=line.split("/");
+						String rn=line_strs[line_strs.length-1];
 						String separator = getSeparator();
-						String[] line_strs=line.split(separator);
-						if(line_strs!=null&&line_strs.length>0){
-							String rn=line_strs[line_strs.length-1];
+						line=line.replaceAll("/", separator);
+						String rl=project_loc+File.separatorChar+line;
+						if(rn!=null&&rl!=null){
 							this.setResource_loc(rl);
 							this.setResource_name(rn);
 							this.expResource();

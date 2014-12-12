@@ -34,7 +34,7 @@ ${project_loc}    ${project_name}		${resource_loc}		${resource_name} 	${folder_p
 	java -jar jeePatchExp.jar %1 %2 %3 %4 %5  
 	
 **注意：**eclipse的外部工具location此时要设置为批处理的路径  
-
+(感谢海丹同学的帮助在windows下的测试和完善)
 - - -
 使用方式有两种： 
 
