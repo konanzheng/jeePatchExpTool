@@ -26,7 +26,12 @@ ${project_loc}    ${project_name}		${resource_loc}		${resource_name} 	${folder_p
 4. ${resource_name} 资源文件名
 5.  导出目录  对话框
 
-假如使用windows系统可能遇到不能直接调用jar文件 可以编写批处理脚本 调用
+假如使用windows系统可能遇到不能直接调用jar文件 
+
+1. 可以修改jar文件默认打开方式为java.exe
+2. 可以编写批处理脚本 调用
+ 
+
 例如：  
 
 	c:    
